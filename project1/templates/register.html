@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <img src="https://png.pngtree.com/element_our/sm/20180329/sm_5abc881cb2505.png" id="icon" alt="User Icon" />
+        </div>
+
+        <!-- Login Form -->
+        <form action="{{url_for('login')}}" method="post">
+            <legend class='text-center '>Register</legend>
+            <input type="email" id="login" class="fadeIn second" name="email" required placeholder="E-mail">
+            <input type="password" id="userPassword" class="fadeIn third" onkeyup="passwordMatch()" name="userPassword"
+                minlength="8" maxlength="15" required placeholder="password">
+                <input class="fadeIn fourth" type="password" id='userPasswordRepeat' onkeyup="passwordMatch()"
+                name="userPasswordRepeat" minlength="8" maxlength="15" placeholder="Repeat password" required>
+            <input type="submit" class="fadeIn fifth" value="Register" id='submitSignUpForm'>
+        </form>
+
+        <div id="formFooter">
+                <form action="{{url_for('index')}}" method="post">
+                    <!-- <input type="submit"  value="Register"> -->
+                    <button class="underlineHover" type="submit" value="Register"> Log In
+    
+                    </button>
+                </form>
+            </div>
+
+    </div>
+</div>
+<script type="text/javascript">
+
+</script>
+{% endblock %}
