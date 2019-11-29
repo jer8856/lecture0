@@ -6,3 +6,5 @@ Usage:
   - Register (or login)
   - Search book
   - Select book from query
+
+Bryan Chachalo
