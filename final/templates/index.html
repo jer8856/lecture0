@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+
+{% block barra %}
+<div class="user-panel">
+    <a href="{{url_for('logout')}}">{{username}} Logout <span class="sr-only">(current)</span></a>
+    <!-- <a href="{{url_for('login')}}"> Login</a>
+    <a href="{{url_for('register')}}"> Register</a> -->
+</div>
+{% endblock %}
+
+
+{% block body %}
+
+
+<!-- Hero section -->
+<section class="hero-section overflow-hidden">
+    <div class="hero-slider owl-carousel">
+
+
+        <div class="hero-item set-bg d-flex align-items-center justify-content-center text-center"
+            data-setbg="{{ url_for('static', filename='img/slider-bg-1.jpg')}}">
+            <div class="container">
+                <h2>Koobookied!</h2>
+                <iframe width="1000" height="605" src="https://www.youtube.com/embed/ZChXK2rdr9M?autoplay=1"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <p>The best place to play!! ENJOY.</p>
+                <!-- <a href="#" class="site-btn">Read More <img src="{{ url_for('static', filename='img/icons/double-arrow.png')}}" alt="#" /></a> -->
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

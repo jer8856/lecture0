@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<html style="height:100%">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="EndGam Gaming Magazine Template">
+    <meta name="keywords" content="endGam,gGaming, magazine, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <!-- <link href="{{ url_for('static', filename='img/favicon.ico') }}" rel="shortcut icon" /> -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}"> -->
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slicknav.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+
+    <!-- Main Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+ 
+    <title>GAMES4ALL Koobookied</title>
+
+    {% block sty %}
+    {% endblock %}
+
+</head>
+
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <header class="header-section">
+        <div class="header-warp">
+
+            <div class="header-bar-warp d-flex">
+                <!-- site logo -->
+                <a href="{{url_for('index')}}" class="site-logo">
+                    <img src="{{ url_for('static', filename='img/logo.png')}}" alt="" width="60">
+                </a>
+                <nav class="top-nav-area w-100">
+
+                    {% block barra %}
+                    
+                    {% endblock %}
+                    <!-- Menu -->
+                    <ul class="main-menu primary-menu">
+                        <li><a href="{{url_for('index')}}">Home</a></li>
+                        <li><a href="{{url_for('games')}}">Games</a></li>
+
+                    
+                        <li><a href="#">Reviews</a>
+                            <ul class="sub-menu">
+                                <li><a href="{{url_for('gamesingle', isbn='0380795272')}}">TIC-TAC-TOE</a></li>
+                                <li><a href="{{url_for('easygame', isbn='1416949658')}}">Snake</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{url_for('contact')}}">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    {% block body%}{% endblock %}
+
+
+
+
+    <!--====== Javascripts & Jquery ======-->
+    <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.slicknav.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky-sidebar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <script>
+        function passwordMatch() {                                                                      //match password input and repeat password input 
+            var userPassword = $("#userPassword");                                                        //get both elements
+            var userPasswordRepeat = $('#userPasswordRepeat');
+            if (userPassword.val().length > 7 && (userPassword.val() === userPasswordRepeat.val())) {       //if passwords match       
+                userPassword.css("border", "1px solid green");                                           //set border to green  and enable submit button
+                userPasswordRepeat.css("border", "1px solid green");
+                $('#submitSignUpForm').prop('disabled', false);
+            } else {                                                                                    //when doesn't match keep borders green and submit button disabled
+                userPassword.css("border", "1px solid red");
+                userPasswordRepeat.css("border", "1px solid red");
+                $('#submitSignUpForm').prop('disabled', true);
+            }
+        }
+    </script>
+
+    {% block scr %}
+    {% endblock %}
+
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block barra %}
+<div class="user-panel">
+    <!-- <a href="{{url_for('logout')}}">{{username}} Logout <span class="sr-only">(current)</span></a>
+    <a href="{{url_for('login')}}"> Login</a> -->
+    <a href="{{url_for('register')}}"> Register</a>
+</div>
+{% endblock %}
+
+{% block body %}
+
+
+<!-- Hero section -->
+<section class="hero-section overflow-hidden">
+    <div class="hero-slider owl-carousel">
+        <div class="hero-item set-bg d-flex align-items-center justify-content-center text-center"
+            data-setbg="{{ url_for('static', filename='img/slider-bg-1.jpg')}}">
+            <div class="container" id="formContent">
+                <h2>Koobookied Games!</h2>
+                <p>Get control of the darkest minds behind games</p>
+                <form action="{{url_for('login')}}" method="post">
+                    <!-- <legend class='text-center '>Log In</legend> -->
+                    <input type="text" id="login" class="" name="emailLogIn" required placeholder="E-mail">
+                    <input type="password" id="password" class="" name="userPasswordLogIn" required
+                        placeholder="password">
+                    <input type="submit" class="login" value="Log In">
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+{% block scr %}
+<script type="text/javascript"></script>
+{% endblock %}
