@@ -1,4 +1,4 @@
 
-set FLASK_APP='application.py'
-set FLASK_DEBUG='1'
-set DATABASE_URL='postgres://auuuvctqjqwihg:0a6bae8449f4fe1f5df452b944f11175f02d556f6296ec4fc3d1f535df168a89@ec2-174-129-253-146.compute-1.amazonaws.com:5432/d6lr4bed07rj6t'
+export FLASK_APP="application.py"
+export FLASK_DEBUG="1"
+export DATABASE_URL="postgres://auuuvctqjqwihg:0a6bae8449f4fe1f5df452b944f11175f02d556f6296ec4fc3d1f535df168a89@ec2-174-129-253-146.compute-1.amazonaws.com:5432/d6lr4bed07rj6t"
