@@ -1,0 +1,22 @@
+Project 3
+
+Estructure
+    - This project contains 3 main directories where there are placed all the template and Django settings.
+    - orders
+        . in this directory there are templates and static folder where there are the html code and css files respectively.
+    - user 
+        . same as orders there are templates and css files
+    - pizza
+        . python django code
+        Those changes include
+        *settings.py*: Some additional lines in the end to enable using some additional Features such as *Crispy Forms*.
+        *urls.py*: Urlpatterns to include the urls specified in users and orders module.
+
+Usage
+
+VIDEO link and github repository is in:
+    [Video](https://youtu.be/j41qNQd8erI).
+
+Personal Touch
+    add add a floating windows where youtube video is playing
+    
