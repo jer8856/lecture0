@@ -1,4 +1,26 @@
 
-export FLASK_APP="application.py"
-export FLASK_DEBUG="1"
-export DATABASE_URL="postgres://auuuvctqjqwihg:0a6bae8449f4fe1f5df452b944f11175f02d556f6296ec4fc3d1f535df168a89@ec2-174-129-253-146.compute-1.amazonaws.com:5432/d6lr4bed07rj6t"
+# FINAL Project 
+
+# templates
+  in templates there are all the html pages.
+    404- to render 404 error
+    contact - page to submit a message
+    games - games menu
+    gamesingle - template for games page
+    login and register -  for register to submit reviews
+
+# static
+  in this folder there are all styling sheets
+    img - images used
+    js -  JavaScript files
+    icon-fonts- all icons used
+    css - all css files 
+Web Programming with Python and JavaScript
+
+Usage: **flask run
+  - Register (or login)
+  - Navigate throughout menu page
+  - Select a game to play
+  - Enjoy games
+
+Bryan Chachalo
